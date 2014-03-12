@@ -13,7 +13,7 @@
 using namespace std;
 
 
-const int MAXCLICK = 5000;
+const int MAXCLICK = 1000;
 int percCount = 1;//counts the percentile (10%, 20%,...)
 
 void LeftClick ( const int x, const int y)
