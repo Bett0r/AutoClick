@@ -36,6 +36,7 @@ if(x >= MAXCLICK*percCount/10) {
 int main() {
 	//cout << "!!!Hello World2222!!!" << endl; // prints !!!Hello World!!!
 	POINT pos;
+	config_lc conf = new config_lc();
 	cout << "5 Seconds to Click!"<<endl;
 	Sleep(5000);//warte vor der ersten Messung
 	GetCursorPos(&pos);
