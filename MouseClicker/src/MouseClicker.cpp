@@ -34,7 +34,7 @@ if(x >= MAXCLICK*percCount/10) {
 }
 
 int main() {
-	cout << "!!!Hello World2222!!!" << endl; // prints !!!Hello World!!!
+	//cout << "!!!Hello World2222!!!" << endl; // prints !!!Hello World!!!
 	POINT pos;
 	cout << "5 Seconds to Click!"<<endl;
 	Sleep(5000);//warte vor der ersten Messung
