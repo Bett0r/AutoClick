@@ -13,8 +13,9 @@
 using namespace std;
 
 
-const int MAXCLICK = 1000;
+const int MAXCLICK = 500000;
 const int CLICKPAUSE = 30; //Pause between Clicks in ms
+const int CLICKDURATION = 50; //How long should the button be pressed?
 int percCount = 1;//counts the percentile (10%, 20%,...)
 
 void LeftClick ( const int x, const int y)
@@ -23,7 +24,7 @@ void LeftClick ( const int x, const int y)
 	GetCursorPos(&pos);
 	SetCursorPos(x,y);
 	mouse_event(MOUSEEVENTF_LEFTDOWN,100, 200, 0,0);
-	Sleep(rand() % 100);//in millisec
+	Sleep(rand() % CLICKDURATION);//in millisec
 	mouse_event(MOUSEEVENTF_LEFTUP,100, 200, 0,0);
 	SetCursorPos(pos.x, pos.y);
 }
@@ -60,7 +61,7 @@ int main() {
 		x = (int) pos.x;
 		y = (int) pos.y;
 		//cout << i<<".Position: Pos.x= "<<x <<"Pos.y= "<< y <<endl;
-		RandomizeMousePosition(&x, &y);
+		//RandomizeMousePosition(&x, &y);
 		LeftClick(x, y);
 		Sleep(CLICKPAUSE);
 		i++;
